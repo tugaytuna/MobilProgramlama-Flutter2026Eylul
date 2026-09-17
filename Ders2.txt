@@ -1,0 +1,53 @@
+void main() {
+  print("tugay");
+  print("tuna");
+  print("kljsadlkjsaldj");
+
+  print(2 + 2);
+  print("2+2");
+
+  //notlar
+
+  // degiskentipi degiskenismi esittir degerataması
+  String kullanici = "Tugay";
+  String kullaniciSoyisim = "Tuna";
+  int sayi1 = 2;
+  int birinciSayi = 55;
+  double sayi2 = 5.2;
+  bool adminMi = true;
+  int yas = 20;
+
+  yas = 22;
+  yas = 30;
+
+  print(kullanici + " " + kullaniciSoyisim);
+
+  kullanici = "İzel";
+
+  print(sayi1 * 5);
+
+  print(birinciSayi / 2);
+
+  print(sayi2);
+  print(sayi1 + sayi2);
+
+  // İsim: kullanici Yaş: yas
+  print("İsim: $kullanici -  Yaş: $yas");
+
+  yas *= 5;
+
+  //sayi2 /= 5;
+
+  print("İsim: $kullanici -  Yaş: $yas");
+
+  // 10 < 5 -> FALSE
+  // 10 > 5 -> TRUE
+  // 10 == 5 -> FALSE
+  // 10 >= 10 -> TRUE
+  // 10 != 10 -> FALSE
+  // 10 != 5 -> TRUE
+
+  bool opr1 = 10 < 5;
+
+  print(opr1);
+}
