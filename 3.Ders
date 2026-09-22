@@ -1,0 +1,56 @@
+void main() {
+  // 10 < 5 -> FALSE
+  // 10 > 5 -> TRUE
+  // 10 == 5 -> FALSE
+  // 11 >= 10 -> TRUE
+  // 10 != 10 -> FALSE
+  // 10 != 5 -> TRUE
+
+  bool opr1 = 10 < 5;
+  int yas = 20;
+  int sayi1 = 19;
+
+  opr1 = 11 >= 10;
+
+  print(opr1);
+
+  //if(opr1 == true)
+  if (opr1) {
+    print("doğru-true");
+  }
+
+  yas = 15;
+
+  if (yas > 18) {
+    print("Sisteme giriş yapabilirsiniz");
+  } else {
+    print("18 yaşından küçüksünüz!");
+  }
+
+  if (sayi1 % 2 == 0) {
+    print("sayi çifttir");
+  } else {
+    print("sayi tektir");
+  }
+
+  int not = 60;
+
+  if (not >= 85) {
+    print("çok iyi");
+  } else if (not >= 70) {
+    print("iyi");
+  } else if (not >= 50) {
+    print("düz geçtin!");
+  } else {
+    print("kaldın");
+  }
+
+  String kullaniciAdi = "tugaytuna";
+  String sifre = "tugay123";
+
+  if (kullaniciAdi == "tugaytuna") {
+    if (sifre == "tugay123") {
+      print("giriş yapıldı");
+    }
+  }
+}
