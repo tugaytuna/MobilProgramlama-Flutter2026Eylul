@@ -1,0 +1,67 @@
+void main() {
+  String kullaniciAdi = "tugaytuna";
+  String sifre = "tugay123";
+
+  // && VE AND
+  // TRUE && TRUE  -> TRUE
+  // TRUE && FALSE -> FALSE
+  // FALSE && TRUE -> FALSE
+  // FALSE && FALSE -> FALSE
+
+  // || VEYA OR
+  // TRUE || TRUE  -> TRUE
+  // TRUE || FALSE -> TRUE
+  // FALSE || TRUE -> TRUE
+  // FALSE || FALSE -> FALSE
+
+  if (kullaniciAdi == "tugaytuna" && sifre == "tugay123") {
+    print("giriş yapıldı!");
+  } else {
+    print("kullanıcı adı veya şifre hatalı");
+  }
+
+  String isim = "tugay";
+
+  // adminler: enes yusuf tugay
+
+  if (isim == "enes" || isim == "yusuf" || isim == "tugay") {
+    print("admin hoşgeldin!");
+  } else {
+    print("misafir kullanıcı hoşgeldin");
+  }
+
+  int yas = 14;
+  bool ehliyetVarmi = false;
+
+  if (yas > 18 && ehliyetVarmi == true) {
+    print("Araç kullanabilirsin");
+  } else {
+    print("Araç kullanamazsın");
+  }
+
+  // normal ücret - indirimli ücret
+  // indirimli ücret  yaş > 65
+  // indirimli ücret  öğrenci
+
+  bool ogrenci = true;
+
+  if (yas > 65 || ogrenci == true) {
+    print("indirimli");
+  } else {
+    print("normal ücret");
+  }
+
+  bool uyeMi = false;
+
+  // yas - ogrenci - uyeMi
+  // kesinlikle yaş 18'den büyük olmalı
+  // ya öğrenci ya da üye olmalı
+
+  if (yas >= 18 && (ogrenci == true || uyeMi == true)) {
+    print("etkinliğe katılabilirsin!");
+  } else {
+    print("etkinliğe katılamazsın");
+  }
+}
+
+
