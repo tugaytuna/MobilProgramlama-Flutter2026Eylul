@@ -1,0 +1,60 @@
+void main() {
+  int sayi1 = 12;
+  bool admin = true;
+
+  String ogrenci1 = "Tugay";
+  String ogrenci2 = "Enes";
+  String ogrenci3 = "Betül";
+  String ogrenci4 = "İbrahim";
+  String ogrenci5 = "Fatih";
+
+  print(ogrenci4);
+
+  //listeler
+  // List<>
+  // ogrenciler listesi
+
+  List<String> ogrenciler = [
+    "Tugay",
+    "Tuna",
+    "Ahmet",
+    "İbrahim",
+    ogrenci5,
+    "Oya",
+    "Yadigar",
+  ];
+
+  print(ogrenciler);
+
+  print(ogrenciler[1]);
+
+  ogrenciler[2] = "Mehmet";
+  print(ogrenciler);
+
+  int elemanSayisi = ogrenciler.length;
+
+  print(ogrenciler[elemanSayisi - 1]);
+  print(ogrenciler.last);
+  print(ogrenciler.first);
+
+  print("Öğrenciler listesinde $elemanSayisi tane öğrenci vardır.");
+
+  ogrenciler.add("Yusuf");
+
+  print(ogrenciler);
+
+  ogrenciler.addAll(["Betül", "Ercan"]);
+
+  print(ogrenciler);
+
+  ogrenciler.insert(2, "Çelik");
+  print(ogrenciler);
+
+  ogrenciler.remove("Fatih");
+  print(ogrenciler);
+
+  ogrenciler.removeAt(6);
+  print(ogrenciler);
+}
+
+
