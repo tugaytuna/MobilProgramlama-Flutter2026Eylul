@@ -1,0 +1,98 @@
+void main() {
+  int sayi = 10;
+
+  print(sayi);
+
+  List<int> sayilar = [1, 5, 6, 7, 123, 51, 21, 86];
+
+  print(sayilar);
+
+  bool sayiVarmi = sayilar.contains(51);
+
+  print(sayiVarmi);
+  print(sayilar[2]);
+
+  sayilar.add(23);
+  print(sayilar);
+
+  List<int> notlar = [44, 87, 64];
+  print("Notlar: $notlar");
+
+  if (notlar[0] > 50) {
+    print("1.Geçtiniz!");
+  }
+
+  if (notlar[1] > 50) {
+    print("2.Geçtiniz");
+  }
+
+  if (notlar[2] > 50) {
+    print("3.Geçtiniz");
+  }
+
+  // Döngüler
+  // FOR
+
+  // değişken oluşturma
+  // koşul ifadesi
+  // artırma-azaltma
+
+  for (int nu = 1; nu < 5; nu++) {
+    print(nu);
+  }
+
+  for (int i = 1; i <= 10; i++) {
+    print("Merhaba");
+  }
+
+  for (int i = 10; i >= 1; i--) {
+    print(i);
+  }
+
+  print("----------------------");
+
+  for (int i = 0; i <= 20; i += 2) {
+    print(i);
+  }
+
+  print("------------------");
+
+  for (int i = 0; i <= 20; i++) {
+    if (i % 3 == 0) {
+      print(i + 5);
+    }
+  }
+  
+  List<String> sehirler = ["Malatya","İzmir","Bilecik","Burdur","İstanbul"];
+  
+  
+  
+  
+  print(sehirler);
+  
+  int elemanS = sehirler.length;
+  
+  sehirler.add("Edirne");
+  sehirler.add("Kars");
+  
+  print(sehirler[0]);
+  print(sehirler[1]);
+  print(sehirler[2]);
+  print(sehirler[3]);
+  print(sehirler[4]);
+  
+  print("*---*");
+  
+
+ 
+  
+  for(int i = 0; i < sehirler.length; i++){
+    print(sehirler[i]);
+  }
+  
+  
+  
+  
+}
+
+
