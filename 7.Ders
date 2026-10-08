@@ -1,0 +1,51 @@
+void main() {
+  List<String> sehirler = ["Malatya", "İzmir", "Bilecik", "Burdur", "İstanbul"];
+
+  sehirler.add("Edirne");
+
+  print(sehirler);
+
+  for (int i = 0; i < sehirler.length; i++) {
+    print(sehirler[i]);
+  }
+
+  print("----------");
+
+  // listenin eleman tipi
+  // istediğim değişken ismi
+  // in
+  // listenin adı
+
+  for (String sehir in sehirler) {
+    print(sehir);
+  }
+
+  List<int> sayilar = [22, 45, 79, 15, 11, 49, 85];
+
+  for (int sayi in sayilar) {
+    print(sayi * sayi);
+  }
+
+  List<int> matNotlar = [48, 12, 98, 78, 45, 85, 82, 79];
+
+  // sınıfta geçenlerin sayısı ve kalanların sayısı
+
+  int gecen = 0;
+  int kalan = 0;
+
+  for (int not in matNotlar) {
+    if (not > 50) {
+      gecen += 1;
+      //gecen++;
+      //gecen = gecen + 1;
+    } else {
+      kalan++;
+    }
+  }
+  
+  print("Geçen öğrenci sayısı: $gecen");
+  print("Kalan öğrenci sayısı: $kalan");
+  
+  
+  
+}
