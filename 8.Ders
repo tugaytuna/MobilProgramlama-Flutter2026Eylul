@@ -1,0 +1,106 @@
+void main() {
+  merhaba("Tugay");
+
+  List<int> matNotlar = [48, 89, 98, 78, 45, 85, 82, 79];
+
+  // sınıfta geçenlerin sayısı ve kalanların sayısı
+  int gecen = 0;
+  int kalan = 0;
+
+  for (int not in matNotlar) {
+    if (not > 50) {
+      gecen += 1;
+      //gecen++;
+      //gecen = gecen + 1;
+    } else {
+      kalan++;
+    }
+  }
+
+  gecen = 0;
+  kalan = 0;
+
+  for (int i = 0; i < matNotlar.length; i++) {
+    if (matNotlar[i] > 50) {
+      gecen += 1;
+      //gecen++;
+      //gecen = gecen + 1;
+    } else {
+      kalan++;
+    }
+  }
+
+  cizgi();
+
+  print("Geçen öğrenci sayısı: $gecen");
+  print("Kalan öğrenci sayısı: $kalan");
+
+  cizgi();
+
+  merhaba("Enes");
+
+  cizgi();
+
+  yasKontrol(42);
+  cizgi();
+  yasKontrol(16);
+  cizgi();
+  yasKontrol(19);
+  cizgi();
+
+  topla(5, 20, true);
+  topla(123, 42, false);
+  topla(91, 11, true);
+  
+  
+  
+  print(carpma(5,2));
+  
+  int xy = carpma(6,3);
+  print(xy);
+  
+  if(carpma(5,10) % 2 == 0){
+    print("sonuc çifttir");
+  }
+  
+}
+
+int carpma(int x, int y){
+  int sonuc = x * y;
+  return sonuc;
+}
+
+void topla(int sayi1, int sayi2, bool detay) {
+  if (detay) {
+    print("1.sayı: $sayi1");
+    print("2.sayı: $sayi2");
+  }
+
+  print("Sonuç: ${sayi1 + sayi2}");
+  cizgi();
+}
+
+void yasKontrol(int yas) {
+  if (yas >= 18) {
+    print("Giriş yapabilirsiniz!");
+  } else {
+    print("Giriş yapamazsınız!");
+    print("${18 - yas} sene sonra görüşürüz :)");
+  }
+}
+
+void merhaba(String isim) {
+  if (isim == "Tugay") {
+    print("Merhaba admin");
+    print("$isim hoş geldin!");
+  } else {
+    print("Merhaba Misafir Kullanıcı");
+    print("$isim hoş geldiniz!");
+  }
+}
+
+void cizgi() {
+  print("--------------------------------");
+}
+
+
