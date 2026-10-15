@@ -1,0 +1,43 @@
+void main() {
+  print(bolme(21, 5));
+  int yas = 20;
+  bool yasUygun = yasKontrol(yas);
+
+  if (yasUygun) {
+    print("Giriş yapabilirsiniz");
+  } else {
+    print("Giriş yapamazsınız");
+  }
+
+  List<int> fiyatlar = [200, 125, 590, 1250, 80, 1150, 675, 765, 925, 1420];
+  
+  print(ortalamaHesapla(fiyatlar));
+}
+
+double ortalamaHesapla(List<int> ft) {
+  int toplamFiyat = 0;
+  for (int fiyat in ft) {
+    toplamFiyat += fiyat;
+  }
+  double ort = toplamFiyat / ft.length;
+  return ort;
+}
+
+double bolme(int x, int y) {
+  if (x % y == 0) {
+    return x / y;
+  } else {
+    //print("tam bölünmez");
+    return 0;
+  }
+}
+
+bool yasKontrol(int yas) {
+  if (yas >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
