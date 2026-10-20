@@ -1,0 +1,66 @@
+void main() {
+  List<int> fiyatlar = [200, 125, 590, 1250, 80, 1150, 675, 765, 925, 1420];
+  List<int> fiyatlar2 = [
+    458,
+    155,
+    75,
+    125,
+    697,
+    154,
+    365,
+    875,
+    762,
+    546,
+    45,
+    12,
+    87,
+  ];
+
+  print(ortalamaHesapla(fiyatlar));
+  print(ortalamaHesapla(fiyatlar2));
+  print(fiyatlar2.length);
+
+  yuksekUcretliler(fiyatlar, 700);
+  yuksekUcretliler(fiyatlar, 400, true);
+  yuksekUcretliler(fiyatlar2, 400, false);
+  yuksekUcretliler(fiyatlar2, 100, true);
+
+  yuksekUcretliler(fiyatlar);
+
+  yuksekUcretliler([1, 5, 7], 2, true);
+}
+
+// 700 üzerindeki fiyatların listesi ve sayısını getirsin
+
+void yuksekUcretliler(
+  List<int> liste, [
+  int limit = 400,
+  bool ekBilgi = false,
+]) {
+  print("--------------");
+  int sayac = 0;
+  List<int> yuksekler = [];
+
+  for (int eleman in liste) {
+    if (eleman > limit) {
+      yuksekler.add(eleman);
+      sayac++;
+    }
+  }
+  print("$limit'den yukarı $sayac adet fiyat vardır.");
+
+  if (ekBilgi) {
+    print(liste);
+    print(yuksekler);
+  }
+  print("--------------");
+}
+
+double ortalamaHesapla(List<int> ft) {
+  int toplamFiyat = 0;
+  for (int fiyat in ft) {
+    toplamFiyat += fiyat;
+  }
+  double ort = toplamFiyat / ft.length;
+  return ort;
+}
