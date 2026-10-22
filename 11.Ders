@@ -1,0 +1,55 @@
+void main() {
+  String ogrenci = "Tugay";
+  List<String> ogrenciler = ["Tugay", "İzel", "Tolga"];
+  
+  print(ogrenci);
+  print(ogrenciler);
+  print(ogrenciler[2]);
+  
+  
+  Map<String, String> ogrenci1 = {
+    "ad": "Tugay",
+    "soyad": "Tuna",
+    "numara": "123",
+  };
+  
+  print(ogrenci1);
+  print(ogrenci1["ad"]);
+  
+  print(ogrenci1["yas"]);
+  
+  
+  Map<String, dynamic> ogrenci2 = {
+    "ad": "Enes",
+    "soyad": "Karadeniz",
+    "numara": 45,
+    "notOrtalaması": 68.5,
+    "aktifMi": true
+  };
+  
+  print(ogrenci2);
+  ogrenci2.remove("soyad");
+  print(ogrenci2);
+  
+  
+  
+  ogrenci2["notOrtalaması"] = 80;
+   
+  
+  double not = ogrenci2["notOrtalaması"];
+  print("$not not değeri. ${not * 2}");
+    
+  
+  
+  if(ogrenci2["aktifMi"]){
+    print("öğrenci aktiftir");
+  }
+  
+  
+  print(ogrenciler.contains("Tugay"));
+  
+  print(ogrenci2.containsKey("yas"));
+  print(ogrenci2.containsValue("Enes"));
+  
+    
+}
