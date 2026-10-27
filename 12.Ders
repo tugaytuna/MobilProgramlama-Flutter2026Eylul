@@ -1,0 +1,93 @@
+void main() {
+  String isim = "Tugay";
+
+  Map<String, dynamic> urun1 = {
+    "urunAdi": "Bilgisayar",
+    "fiyat": 4500,
+    "stok": 0,
+    "aktifMi": true,
+    "garanti": false,
+  };
+
+  Map<String, dynamic> urun2 = {
+    "urunAdi": "Telefon",
+    "fiyat": 1500,
+    "stok": 9,
+    "aktifMi": true,
+    "garanti": true,
+  };
+
+  if (urun1["stok"] > 0) {
+    print(urun1["urunAdi"]);
+  }
+
+  for (String anahtar in urun1.keys) {
+    if (anahtar == "fiyat") {
+      print("Fiyat bilgisi mevcut");
+    }
+  }
+
+  for (var degerler in urun1.values) {
+    if (degerler == "Bilgisayar") {
+      print("ürünler içerisinde bilgisayar mevcut");
+    }
+  }
+
+  //print(urun1.entries);
+
+  for (var kayit in urun1.entries) {
+    print("${kayit.key} = ${kayit.value}");
+  }
+
+  //urun1.forEach((key, value) {
+  //  print("$key = $value");
+  //});
+
+  List<int> deneme = [1, 23, 4, 5, 56];
+
+  List<Map<String, dynamic>> urunler = [
+    {
+      "urunAdi": "Klavye",
+      "fiyat": 500,
+      "stok": 19,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunAdi": "Monitör",
+      "fiyat": 2000,
+      "stok": 3,
+      "aktifMi": false,
+      "garanti": false,
+    },
+  ];
+
+  urunler.add(urun1);
+  urunler.add(urun2);
+
+  print(urunler[0]["aktifMi"]);
+
+  print(urunler[0]["urunAdi"]);
+  print(urunler[1]["urunAdi"]);
+
+  for (var urun in urunler) {
+    print(urun["urunAdi"]);
+  }
+
+  // fiyatı 700 lira üzerindeki ürünlerin isim ve stok değerleri
+  limit(urunler, 500);
+  limit(urunler, 1500);
+  limit(urunler, 2000);
+;}
+
+void limit(List<Map<String, dynamic>> urunlerListe, int limit) {
+  print("$limit tl üzerindeki ürünler:");
+
+  for (var urun in urunlerListe) {
+    if (urun["fiyat"] > limit) {
+      print("${urun["urunAdi"]} isimli ürünün stok değeri: ${urun["stok"]}");
+      //print(urun["urunAdi"]);
+      //print(urun["stok"]);
+    }
+  }
+}
