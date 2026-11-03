@@ -1,0 +1,241 @@
+void main() {
+  List<Map<String, dynamic>> urunler = [
+    {
+      "urunId": 1,
+      "urunAdi": "Klavye",
+      "fiyat": 500,
+      "stok": 19,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunId": 2,
+      "urunAdi": "Monitör",
+      "fiyat": 2000,
+      "stok": 3,
+      "aktifMi": false,
+      "garanti": false,
+    },
+    {
+      "urunId": 3,
+      "urunAdi": "Mouse",
+      "fiyat": 350,
+      "stok": 25,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunId": 4,
+      "urunAdi": "Kulaklık",
+      "fiyat": 800,
+      "stok": 12,
+      "aktifMi": true,
+      "garanti": true,
+    },
+    {
+      "urunId": 5,
+      "urunAdi": "Hoparlör",
+      "fiyat": 1200,
+      "stok": 0,
+      "aktifMi": false,
+      "garanti": true,
+    },
+    {
+      "urunId": 6,
+      "urunAdi": "Web Kamera",
+      "fiyat": 950,
+      "stok": 8,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunId": 7,
+      "urunAdi": "Mikrofon",
+      "fiyat": 1500,
+      "stok": 6,
+      "aktifMi": true,
+      "garanti": true,
+    },
+    {
+      "urunId": 8,
+      "urunAdi": "Laptop",
+      "fiyat": 25000,
+      "stok": 4,
+      "aktifMi": true,
+      "garanti": true,
+    },
+    {
+      "urunId": 9,
+      "urunAdi": "Tablet",
+      "fiyat": 8500,
+      "stok": 10,
+      "aktifMi": false,
+      "garanti": true,
+    },
+    {
+      "urunId": 10,
+      "urunAdi": "Yazıcı",
+      "fiyat": 4500,
+      "stok": 5,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunId": 11,
+      "urunAdi": "Harici Disk",
+      "fiyat": 2200,
+      "stok": 15,
+      "aktifMi": true,
+      "garanti": true,
+    },
+    {
+      "urunId": 12,
+      "urunAdi": "USB Bellek",
+      "fiyat": 250,
+      "stok": 50,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunId": 13,
+      "urunAdi": "SSD",
+      "fiyat": 1800,
+      "stok": 9,
+      "aktifMi": true,
+      "garanti": true,
+    },
+    {
+      "urunId": 14,
+      "urunAdi": "RAM",
+      "fiyat": 1400,
+      "stok": 0,
+      "aktifMi": false,
+      "garanti": true,
+    },
+    {
+      "urunId": 15,
+      "urunAdi": "Ekran Kartı",
+      "fiyat": 16000,
+      "stok": 2,
+      "aktifMi": true,
+      "garanti": true,
+    },
+    {
+      "urunId": 16,
+      "urunAdi": "İşlemci",
+      "fiyat": 9500,
+      "stok": 7,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunId": 17,
+      "urunAdi": "Anakart",
+      "fiyat": 5200,
+      "stok": 4,
+      "aktifMi": false,
+      "garanti": true,
+    },
+    {
+      "urunId": 18,
+      "urunAdi": "Bilgisayar Kasası",
+      "fiyat": 2800,
+      "stok": 11,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunId": 19,
+      "urunAdi": "Güç Kaynağı",
+      "fiyat": 2400,
+      "stok": 6,
+      "aktifMi": true,
+      "garanti": true,
+    },
+    {
+      "urunId": 20,
+      "urunAdi": "Soğutucu",
+      "fiyat": 1100,
+      "stok": 14,
+      "aktifMi": true,
+      "garanti": false,
+    },
+    {
+      "urunId": 21,
+      "urunAdi": "Modem",
+      "fiyat": 1700,
+      "stok": 0,
+      "aktifMi": false,
+      "garanti": false,
+    },
+    {
+      "urunId": 22,
+      "urunAdi": "Mouse Pad",
+      "fiyat": 150,
+      "stok": 35,
+      "aktifMi": true,
+      "garanti": false,
+    },
+  ];
+
+  //print(urunler);
+
+  List<int> stoksuzlar = [];
+
+  for (var urun in urunler) {
+    if (urun["stok"] == 0) {
+      print(urun["urunAdi"]);
+      stoksuzlar.add(urun["urunId"]);
+    }
+  }
+
+  print(stoksuzlar);
+
+  // stoksuzların - urunadı fiyat ve aktif mi değerlerini görmek istiyorum.
+
+  // stoksuzlar[0] = 5
+
+  print("alternatif 1");
+  for (int id in stoksuzlar) {
+    for (var urun in urunler) {
+      if (urun["urunId"] == id) {
+        print(urun["urunAdi"]);
+        print(urun["fiyat"]);
+        print(urun["aktifMi"]);
+      }
+    }
+  }
+
+  print("alternatif 2");
+  for (int i = 0; i < stoksuzlar.length; i++) {
+    for (var urun in urunler) {
+      if (urun["urunId"] == stoksuzlar[i]) {
+        print(urun["urunAdi"]);
+        print(urun["fiyat"]);
+        print(urun["aktifMi"]);
+      }
+    }
+  }
+  
+  print("--------------------");
+  
+  List<Map<String,dynamic>> garantili = [];
+    
+  for(var urun in urunler){
+    if(urun["garanti"]){
+      garantili.add(urun);
+    }    
+  }
+  
+
+  for(var garanti in garantili){
+    print(garanti["urunAdi"]);
+    print(garanti["fiyat"]);
+  }
+  print("${garantili.length} adet garantili ürün bulunuyor.");
+  
+  
+  
+}
+
+//void urunGosteR(){}
