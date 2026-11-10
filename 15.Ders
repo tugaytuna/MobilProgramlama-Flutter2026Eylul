@@ -1,0 +1,145 @@
+void main() {
+  // ekrana yazı yazırmak
+  print("hello world!");
+  // ekrana matematiksel işlemin sonucu yazdırma
+  print(5 * 4);
+
+  // değişken oluşturma
+  String ogrenciIsim1 = "Tugay";
+  int sayi1 = 24;
+  double sayi2 = 4.2;
+  bool admin = true; // false
+
+  print("$sayi1");
+
+  // koşul ifadeleri
+  if (sayi1 > 30) {
+    print("30 dan büyük");
+  } else if (sayi1 > 20) {
+    print("30 ile 20 arasında");
+  } else if (sayi1 > 10) {
+    print("10 ile 20 arasındadır");
+  } else {
+    print("küçük bir sayı");
+  }
+
+  // && VE AND
+  // TRUE && TRUE  -> TRUE
+  // TRUE && FALSE -> FALSE
+  // FALSE && TRUE -> FALSE
+  // FALSE && FALSE -> FALSE
+
+  // || VEYA OR
+  // TRUE || TRUE  -> TRUE
+  // TRUE || FALSE -> TRUE
+  // FALSE || TRUE -> TRUE
+  // FALSE || FALSE -> FALSE
+
+  String kullaniciAdi = "tugaytuna";
+  String sifre = "tugay123";
+
+  if (kullaniciAdi == "tugaytuna" && sifre == "tugay123") {
+    print("giriş yapıldı!");
+  } else {
+    print("kullanıcı adı veya şifre hatalı");
+  }
+
+  // Listeler
+  List<String> ogrenciler = ["Fatih", "Oya", "Yadigar", "Yusuf"];
+  print(ogrenciler[0]);
+
+  // eleman ekleme
+  ogrenciler.add("Tugay");
+
+  // birden fazla eleman eklemek
+  ogrenciler.addAll(["Betül", "Ercan"]);
+
+  // belli bir indekse eleman eklemek
+  ogrenciler.insert(2, "Çelik");
+
+  // değerine göre eleman silmek
+  ogrenciler.remove("Fatih");
+
+  // inkesine göre eleman silmek
+  ogrenciler.removeAt(6);
+
+  print(ogrenciler.contains("Tugay"));
+
+  for (int i = 0; i < ogrenciler.length; i++) {
+    //print(ogrenciler[i]);
+  }
+
+  for (String ogrn in ogrenciler) {
+    //print(ogrn);
+  }
+
+  goster("Tugay");
+  goster("Fatih");
+  
+  double fiyat1 = kdvEkle(100);
+  
+  print(fiyat1);
+  
+  List<String> adminler = ["Fatih", "Oya", "Yadigar", "Yusuf"];
+  
+  if(adminMi(adminler,"Oya")){
+    print("Admin");
+  }else{
+    print("Admin değil");
+  }
+  
+  
+  Map<String,dynamic> ogrenci1 = {
+    "isim": "Tugay",
+    "soyisim": "Tuna",
+    "okulNo": 54,
+    "aktifMi": true,
+    "notOrt": 75.4,
+  };
+  
+  print(ogrenci1["isim"]);
+  
+  
+  List<Map<String,dynamic>> ogrencilerDetay = [
+    {
+      "isim": "Fatih",
+      "soyisim": "Yılmaz",
+      "okulNo": 24,
+      "aktifMi": true,
+      "notOrt": 87.2
+    }
+  ];
+  
+  ogrencilerDetay.add(ogrenci1);
+  
+  print(ogrencilerDetay);
+  
+  print(ogrencilerDetay[0]["okulNo"]);
+  
+}
+
+void goster(String isim) {
+  if (isim == "Tugay") {
+    print("Admin hoş geldin!");
+  } else {
+    print("$isim hoş geldiniz!");
+  }
+}
+
+double kdvEkle(int sayi){
+  double toplam = sayi * 1.2;
+  return toplam;
+}
+
+bool adminMi(List<String> adminListesi,String kullanici){
+  for(String admin in adminListesi){
+    if(kullanici == admin){
+      return true;
+    }
+  }
+  
+  return false;
+}
+
+
+
