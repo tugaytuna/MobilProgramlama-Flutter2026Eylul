@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'İlk Proje',
       theme: ThemeData(
         colorScheme: .fromSeed(
-          seedColor: const Color.fromARGB(255, 231, 205, 56),
+          seedColor: const Color.fromARGB(255, 255, 93, 242),
         ),
       ),
       home: const MyHomePage(title: 'İlk Proje Kasım'),
@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      _counter += 2;
+      _counter += 5;
     });
   }
 
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
-        title: Text(widget.title),
+        title: Text("Proje 1"),
       ),
       body: Center(
         child: Column(
@@ -56,13 +56,26 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text("Tugay Tuna"),
+            ElevatedButton(
+              onPressed: () {
+                _incrementCounter();
+              },
+              child: Text("Tıkla!"),
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          setState(() {
+            _counter += 5;
+          });
+        },
         tooltip: 'Increment',
-        child: const Icon(Icons.favorite),
+        child: const Icon(Icons.navigation),
+        foregroundColor: Color.fromARGB(255, 0, 0, 255),
+        backgroundColor: Color.fromARGB(255, 179, 255, 0),
       ),
     );
   }
